@@ -1,6 +1,6 @@
 # -*- mode: Python ; coding: utf-8 -*-
 # Copyright © 2020 Jonathan Dayley, <jonathandayley@gmail.com>
-# with acknowledgement to Wiktionary and Forvo
+# with acknowledgement to Wiktionary, Forvo, and mdbg.net
 
 #%% Import packages
 import sys
@@ -19,12 +19,12 @@ from bs4 import BeautifulSoup
 import shutil
 
 #%% Set up logging
-# logging.basicConfig(
-#	 filename = '/Users/Cadenza/Desktop/LOG.log', # Change to target log destination
-#	 filemode = 'w',
-#	 format = '%(message)s',
-#	 level = logging.DEBUG
-# )
+#logging.basicConfig(
+#	filename = '/Users/Cadenza/Desktop/LOG.log', # Change to target log destination
+#	filemode = 'w',
+#	format = '%(message)s',
+#	level = logging.DEBUG
+#)
 def log(target,pp=True,utf8=False,mbox=False):
 	target = str(target)
 	if pp:
@@ -39,6 +39,7 @@ def log(target,pp=True,utf8=False,mbox=False):
 config = mw.addonManager.getConfig(__name__)
 
 #%% Set constants
+t_type = config["Chinese vocab note type"]
 f_char = config["Chinese characters field"]
 f_pinyin = config["Chinese pinyin field"]
 f_anim = config["Chinese animations field"]
@@ -191,22 +192,23 @@ def insert_sound(note):
 
 #%% Get master function
 def chineseGetter(changed,note,current_field_idx):
-	pathlib.Path(destination).mkdir(parents=True, exist_ok=True)
-	oldfields = str(note.fields)
-	note = insert_char(note)
-	note = insert_pinyin(note)
-	note = insert_anim(note)
-	note = insert_sound(note)
-	newfields = str(note.fields)
-	compare = oldfields != newfields
-	if(compare):
-		note.flush()
-		mw.col.save()
-		shutil.rmtree(destination, ignore_errors = True)
-		try:
-			mw.reset()
-		except:
-			pass
+	if(note._model["name"] == t_type):
+		pathlib.Path(destination).mkdir(parents=True, exist_ok=True)
+		oldfields = str(note.fields)
+		note = insert_char(note)
+		note = insert_pinyin(note)
+		note = insert_anim(note)
+		note = insert_sound(note)
+		newfields = str(note.fields)
+		compare = oldfields != newfields
+		if(compare):
+			note.flush()
+			mw.col.save()
+			shutil.rmtree(destination, ignore_errors = True)
+			try:
+				mw.reset()
+			except:
+				pass
 
 #%% Go to town
 gui_hooks.editor_did_unfocus_field.append(chineseGetter)

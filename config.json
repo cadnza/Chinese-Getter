@@ -1,7 +1,8 @@
 {
-    "Chinese characters field": "Chinese characters",
-    "Chinese animations field": "Chinese characters - Animated",
-		"Chinese pinyin field": "Chinese pinyin",
-		"Chinese sound field": "Chinese sound",
-		"Forvo API key": ""
+	"Chinese vocab note type": "Chinese - Vocab",
+	"Chinese characters field": "Chinese characters",
+	"Chinese animations field": "Chinese characters - Animated",
+	"Chinese pinyin field": "Chinese pinyin",
+	"Chinese sound field": "Chinese sound",
+	"Forvo API key": ""
 }
