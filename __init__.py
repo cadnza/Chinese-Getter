@@ -92,7 +92,7 @@ def toNote(data,fieldName,note):
 
 #%% Get character function
 def insert_char(note):
-	if isEmpty(f_char,note) and not isEmpty(f_pinyin,note):
+	if isEmpty(f_char,note):
 		wiktBase = "https://en.wiktionary.org"
 		wiktStub = "/wiki/"
 		try:
@@ -114,7 +114,7 @@ def insert_char(note):
 
 #%% Get pinyin function
 def insert_pinyin(note):
-	if isEmpty(f_pinyin,note) and not isEmpty(f_char,note):
+	if isEmpty(f_pinyin,note):
 		wiktBase = "https://en.wiktionary.org"
 		wiktStub = "/wiki/"
 		wiktURL = wiktBase + wiktStub + getFieldValue(f_char,note)
