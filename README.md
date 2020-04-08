@@ -4,7 +4,7 @@
 
 ## Downloading
 
-The easiest option is to get Chinese Getter through Anki by going to https://ankiweb.net/shared/info/972150718.
+The easiest option is to get Chinese Getter is [through Anki](https://ankiweb.net/shared/info/972150718).
 
 ## Operation
 
