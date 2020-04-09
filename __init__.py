@@ -1,6 +1,6 @@
 # -*- mode: Python ; coding: utf-8 -*-
 # Copyright © 2020 Jonathan Dayley, <jonathandayley@gmail.com>
-# with acknowledgement to Wiktionary, Forvo, and mdbg.net
+# with acknowledgement to Wiktionary, Forvo, and mdbg.net PRUEBA
 
 #%% Import packages
 import sys
