@@ -42,7 +42,7 @@ Chinese Getter has six configurable fields. The first represents the title of th
 
 The next four represent the titles of the fields you'd like Anki to fill, e.g. Chinese Getter defaults to putting Chinese characters in the *Chinese characters* field in your note. If any of the fields are missing from your note, Chinese Getter won't try to fill them, so you don't need to turn it off when working with non-Chinese decks.
 
-The last configurable field stores your API key from Forvo. Since it defaults to blank, **you'll need to get a key for Chinese Getter to get audio.**. If you don't have a key, Chinese Getter won't try to get audio, and if your key is invalid or expired, it'll let you know.
+The last configurable field stores your API key from Forvo. Since it defaults to blank, **you'll need to get a key for Chinese Getter to get audio.** If you don't have a key, Chinese Getter won't try to get audio, and if your key is invalid or expired, it'll let you know.
 
 ### "Chinese vocab note type"
 
