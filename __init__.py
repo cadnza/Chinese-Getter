@@ -226,7 +226,7 @@ def chineseGetter(changed, note, current_field_idx):
         newfields = str(note.fields)
         compare = oldfields != newfields
         if(compare):
-            note.flush()
+            # note.flush() # This is throwing an error that I can't track for now; I'll look into it if removing it turns out to cause trouble.
             mw.col.save()
             shutil.rmtree(destination, ignore_errors=True)
             try:
