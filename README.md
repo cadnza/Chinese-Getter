@@ -1,5 +1,7 @@
 # Chinese Getter
 
+![](https://img.shields.io/github/v/release/cadnza/Chinese-Getter)
+
 *Anki add-on to retrieve and fill metadata on Chinese vocabulary*
 
 ## Downloading
