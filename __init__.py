@@ -144,7 +144,7 @@ def insert_pinyin(note):
 			except:
 				found = 0
 			if found:
-				final = atags[i+1].text
+				final = atags[i + 1].text
 				break
 		try:
 			return toNote(final, f_pinyin, note)
